@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 const offers = [
   { label: "Lectura técnica", body: "Leemos planos y especificaciones, devolvemos observaciones constructivas en 72 hs." },
   { label: "Despiece y planimetría", body: "Entregamos despieces firmados que el estudio puede adjuntar a su documentación." },
-  { label: "Materiales y muestras", body: "Carpeta de placas, herrajes y terminaciones disponibles, con muestras físicas a pedido." },
+  { label: "Materiales y fichas", body: "Placas, herrajes, terminaciones —y fichas técnicas de cada colección listas para incluir en pliegos." },
   { label: "Cotización en etapas", body: "Pricing transparente por etapa de obra, ajustado al cronograma del estudio." },
   { label: "Coordinación en obra", body: "Capataz dedicado durante la instalación. Acta de entrega + retoque programado." },
   { label: "Garantía documentada", body: "Garantía escrita de fabricación y herrajes. Soporte post-entrega real." },
@@ -36,7 +36,7 @@ export function ForArchitects() {
                 className="font-mono text-[11px] tracking-[0.22em] uppercase"
                 style={{ color: "color-mix(in srgb, var(--paper) 60%, transparent)" }}
               >
-                06 / Para estudios
+                07 / Para estudios
               </span>
               <h2 className="font-display-tight text-[8vw] md:text-[5.5vw] leading-[0.95] mt-4">
                 Si sos

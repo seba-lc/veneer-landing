@@ -18,7 +18,7 @@ export function Clients() {
         <div className="grid grid-cols-12 mb-14 md:mb-20">
           <div className="col-span-12 md:col-span-4">
             <Reveal>
-              <span className="section-num">05 / Confianza</span>
+              <span className="section-num">06 / Confianza</span>
               <h2 className="font-display-tight text-5xl md:text-6xl leading-[0.95] mt-4 text-[var(--ink)]">
                 Quiénes
                 <br />

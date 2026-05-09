@@ -6,9 +6,9 @@ import { Wordmark } from "./Wordmark";
 const links = [
   { href: "#manifiesto", label: "Manifiesto" },
   { href: "#trabajo", label: "Trabajo" },
+  { href: "#colecciones", label: "Colecciones" },
   { href: "#proceso", label: "Proceso" },
   { href: "#proyectos", label: "Proyectos" },
-  { href: "#clientes", label: "Clientes" },
   { href: "#estudios", label: "Estudios" },
   { href: "#contacto", label: "Contacto" },
 ];

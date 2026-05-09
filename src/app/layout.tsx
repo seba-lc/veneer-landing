@@ -23,9 +23,9 @@ const mono = JetBrains_Mono({
 });
 
 const SITE_URL = "https://veneer.com.ar";
-const TITLE = "Veneer — Carpintería de melamina a medida | Yerba Buena, Tucumán";
+const TITLE = "Veneer — Carpintería a medida y colecciones | Yerba Buena, Tucumán";
 const DESCRIPTION =
-  "Carpintería de melamina premium en Yerba Buena, Tucumán. Co-creamos cocinas, placares, oficinas y proyectos integrales con arquitectos, estudios y particulares. Clientes: Bonafide, Benedetto, La Cota, Hospital Padilla, Hirigoyen.";
+  "Carpintería de melamina premium en Yerba Buena, Tucumán. Cocinas, placares, oficinas y proyectos integrales a medida —y colecciones standalone propias: bar, living, dormitorio, mesas. Co-creación con arquitectos y estudios. Clientes: Bonafide, Hospital Padilla.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,6 +41,12 @@ export const metadata: Metadata = {
     "muebles para arquitectos",
     "carpintería premium Argentina",
     "mobiliario corporativo Tucumán",
+    "colecciones de muebles",
+    "mueble bar",
+    "rack TV",
+    "mesa de quincho",
+    "cama box",
+    "comoda",
   ],
   authors: [{ name: "Veneer" }],
   creator: "Veneer",
@@ -87,6 +93,11 @@ const localBusinessJsonLd = {
     "Placares a medida",
     "Mobiliario corporativo",
     "Mobiliario para oficinas",
+    "Colecciones standalone",
+    "Mueble bar con cava",
+    "Living TV modular",
+    "Mesa de quincho",
+    "Cama box con cajones",
     "Co-creación con arquitectos",
   ],
 };

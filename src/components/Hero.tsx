@@ -11,13 +11,12 @@ const getServerSnapshot = () => false;
 export function Hero() {
   const reduce = useReducedMotion();
   const hydrated = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
-  // Pre-hydration / reduce-motion: contenido visible sin animación.
   const animate = hydrated && !reduce;
 
   return (
     <section
       id="top"
-      className="hero-bg grain relative min-h-[100svh] flex items-end pt-[72px] pb-12 md:pb-16 overflow-hidden"
+      className="hero-bg grain relative min-h-[100svh] flex items-end pt-[88px] pb-12 md:pb-16 overflow-hidden"
     >
       {/* Blueprint diagonal subtle */}
       <svg
@@ -34,9 +33,9 @@ export function Hero() {
       </svg>
 
       <div className="container-edge relative z-10 w-full">
-        <div className="grid grid-cols-12 gap-y-8 md:gap-x-8 items-end">
-          {/* Left: tag + title */}
-          <div className="col-span-12 lg:col-span-7">
+        <div className="grid grid-cols-12 gap-y-10 md:gap-x-10 items-end">
+          {/* Left: tag + title + lede + CTAs */}
+          <div className="col-span-12 lg:col-span-6 lg:pr-4">
             <motion.div
               initial={animate ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
@@ -51,7 +50,7 @@ export function Hero() {
               initial={animate ? { opacity: 0, y: 28 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.05, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display-tight text-[13vw] md:text-[10vw] lg:text-[8.4vw] leading-[0.9] text-[var(--ink)]"
+              className="font-display-tight text-[14vw] md:text-[10vw] lg:text-[7.6vw] leading-[0.9] text-[var(--ink)]"
             >
               Carpintería
               <br />
@@ -59,72 +58,87 @@ export function Hero() {
               <br />
               co-creada.
             </motion.h1>
-          </div>
 
-          {/* Right: lede + CTAs */}
-          <div className="col-span-12 lg:col-span-5 lg:pl-8">
             <motion.div
               initial={animate ? { opacity: 0, y: 18 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
-              className="space-y-7 max-w-md"
+              className="space-y-7 mt-8 md:mt-10 max-w-xl"
             >
               <p className="text-[var(--oak)] text-[17px] leading-[1.6]">
-                Hacemos cocinas, placares, oficinas y casas enteras de melamina
-                de diseño. Trabajamos junto a arquitectos, estudios y dueños de
-                proyecto: vos traés la idea, nosotros la materializamos con
-                criterio de oficio.
+                Hacemos cocinas, placares, oficinas y casas enteras a medida —y
+                ahora también muebles standalone, en colecciones propias.
+                Trabajamos junto a arquitectos, estudios y dueños de proyecto:
+                vos traés la idea, nosotros la materializamos con criterio de
+                oficio.
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <a href="#contacto" className="btn-rust">
                   Iniciar un proyecto
                   <span aria-hidden>→</span>
                 </a>
-                <a href="#proyectos" className="btn-ghost">
-                  Ver trabajos
+                <a href="#colecciones" className="btn-ghost">
+                  Ver colecciones
                 </a>
               </div>
-              <dl className="grid grid-cols-2 gap-x-6 gap-y-4 pt-6 border-t border-[var(--rule)]">
-                <div>
-                  <dt className="tag-mono">Modelo</dt>
-                  <dd className="font-display text-[22px] mt-1">Co-creación</dd>
-                </div>
-                <div>
-                  <dt className="tag-mono">Materialidad</dt>
-                  <dd className="font-display text-[22px] mt-1">Melamina premium</dd>
-                </div>
-                <div>
-                  <dt className="tag-mono">Cobertura</dt>
-                  <dd className="font-display text-[22px] mt-1">Tucumán + NOA</dd>
-                </div>
-                <div>
-                  <dt className="tag-mono">B2B + B2C</dt>
-                  <dd className="font-display text-[22px] mt-1">Estudios y particulares</dd>
-                </div>
-              </dl>
             </motion.div>
           </div>
 
-          {/* Full-width hero photo */}
-          <div className="col-span-12 mt-12 md:mt-20">
+          {/* Right: hero photo */}
+          <div className="col-span-12 lg:col-span-6">
             <motion.figure
               initial={animate ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="img-zoom relative aspect-[16/9] md:aspect-[21/9] w-full"
+              className="img-zoom relative aspect-[4/5] md:aspect-[5/6] lg:aspect-[4/5] w-full"
             >
               <Image
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=85"
-                alt="Cocina contemporánea con frentes de madera y melamina, isla central, terminaciones a medida"
+                src="/catalogo/coleccion-bar/montaje.webp"
+                alt="Mueble bar Veneer en madera oscura, ambiente residencial editorial con barra de bar y guarda-vinos integrada"
                 fill
                 priority
-                sizes="100vw"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />
               <figcaption className="absolute bottom-3 left-3 md:bottom-5 md:left-5 tag-mono bg-[var(--paper)]/90 px-3 py-1.5">
-                Proyecto de referencia · Cocina integral
+                Colección Bar · Montaje editorial
               </figcaption>
             </motion.figure>
+          </div>
+
+          {/* Stats row, full width */}
+          <div className="col-span-12 mt-2 md:mt-6">
+            <motion.dl
+              initial={animate ? { opacity: 0, y: 14 } : { opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6 pt-6 border-t border-[var(--rule)]"
+            >
+              <div>
+                <dt className="tag-mono">Modelo</dt>
+                <dd className="font-display text-[20px] md:text-[22px] mt-1">
+                  Co-creación
+                </dd>
+              </div>
+              <div>
+                <dt className="tag-mono">Materialidad</dt>
+                <dd className="font-display text-[20px] md:text-[22px] mt-1">
+                  Melamina premium
+                </dd>
+              </div>
+              <div>
+                <dt className="tag-mono">Cobertura</dt>
+                <dd className="font-display text-[20px] md:text-[22px] mt-1">
+                  Tucumán + NOA
+                </dd>
+              </div>
+              <div>
+                <dt className="tag-mono">Dual track</dt>
+                <dd className="font-display text-[20px] md:text-[22px] mt-1">
+                  A medida + Colecciones
+                </dd>
+              </div>
+            </motion.dl>
           </div>
         </div>
       </div>

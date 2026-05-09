@@ -12,7 +12,7 @@ export function Contact() {
         <div className="grid grid-cols-12 gap-y-14 md:gap-x-8">
           <div className="col-span-12 md:col-span-5">
             <Reveal>
-              <span className="section-num">07 / Contacto</span>
+              <span className="section-num">08 / Contacto</span>
               <h2 className="font-display-tight text-[10vw] md:text-[6vw] leading-[0.92] mt-4 text-[var(--ink)]">
                 Contanos
                 <br />

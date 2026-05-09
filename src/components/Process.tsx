@@ -37,7 +37,7 @@ export function Process() {
         <div className="grid grid-cols-12 mb-16 md:mb-20">
           <div className="col-span-12 md:col-span-4">
             <Reveal>
-              <span className="section-num">03 / Proceso</span>
+              <span className="section-num">04 / Proceso</span>
               <h2 className="font-display-tight text-5xl md:text-6xl leading-[0.95] mt-4 text-[var(--ink)]">
                 Cuatro pasos.
                 <br />
